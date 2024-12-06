@@ -1,7 +1,7 @@
 [app]
-build_directory = "./"
+build_directory = "starknet/"
 sdk = "Rust"
-devices = ["nanos", "nanox", "nanos+"]
+devices = ["nanox", "nanos+", "stax", "flex"]
 
 [tests]
 pytest_directory = "./tests/"

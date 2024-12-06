@@ -10,12 +10,14 @@ def test_app_mainmenu(firmware, navigator, test_name):
         instructions = [
             NavInsID.RIGHT_CLICK,
             NavInsID.RIGHT_CLICK,
-            NavInsID.RIGHT_CLICK
+            NavInsID.RIGHT_CLICK,
+            NavInsID.RIGHT_CLICK,
         ]
     else:
         instructions = [
             NavInsID.USE_CASE_HOME_INFO,
-            NavInsID.USE_CASE_SETTINGS_SINGLE_PAGE_EXIT
+            NavInsID.USE_CASE_SETTINGS_NEXT,
+            NavInsID.LEFT_HEADER_TAP
         ]
     navigator.navigate_and_compare(ROOT_SCREENSHOT_PATH, test_name, instructions,
                                    screen_change_before_first_instruction=False)

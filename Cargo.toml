@@ -1,16 +1,12 @@
-[package]
-name = "starknet"
-version = "1.1.1"
-edition = "2021"
-authors = ["yogh333"]
+[workspace]
+members = [
+    "tools/apdu-generator",
+    "tools/tx-hash", 
+    "tools/check-signature", 
+    "starknet"
+]
 
-[dependencies]
-ledger_device_sdk = "1.8.2"
-include_gif = "1.0.1"
-
-[features]
-default = []
-pending_review_screen = []
+resolver = "2"
 
 [profile.dev]
 panic = "abort"
@@ -19,18 +15,3 @@ panic = "abort"
 panic = "abort"
 opt-level = 'z' 
 lto = true
-
-[package.metadata.ledger]
-curve = ["secp256k1"]
-path = ["2645'"]
-name = "Starknet"
-flags = "0"
-
-[package.metadata.ledger.nanos]
-icon = "crab.gif"
-
-[package.metadata.ledger.nanox]
-icon = "starknet_small.gif"
-
-[package.metadata.ledger.nanosplus]
-icon = "starknet_small.gif"

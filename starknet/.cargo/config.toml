@@ -1,0 +1,9 @@
+[target.nanosplus]
+runner = "speculos -a=1 --model=nanosp"
+
+[build]
+target = "nanosplus"
+
+[unstable]
+build-std = ["core", "alloc"]
+build-std-features = ["compiler-builtins-mem"]
